@@ -87,6 +87,10 @@ $(PCFILE): $(PCFILE).in
 	PREFIX=$(PREFIX) LIBDIR=$(LIBDIR) INCDIR=$(INCDIR) VERSION=$(VERSION) \
 	REQUIRES=$(REQUIRES) REQLIBS=$(REQ_LLIBS) sh genpc.sh $(PCFILE)
 
+# no tests yet
+check:
+	:
+
 clean:
 	rm -f $(OBJS) $(AHDR) fcns.h help.h func.h \
 		$(SHAREDLIB) $(STATICLIB) $(PCFILE)
