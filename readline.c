@@ -1876,7 +1876,9 @@ filename_completion_function(const char *name, int state)
 char *
 username_completion_function(const char *text, int state)
 {
-#if defined(HAVE_GETPW_R_POSIX) || defined(HAVE_GETPW_R_DRAFT)
+/*#if defined(HAVE_GETPW_R_POSIX) || defined(HAVE_GETPW_R_DRAFT)*/
+/* portability note: getpwent_r is not POSIX */
+#if 0
 	struct passwd pwres;
 	char pwbuf[1024];
 #endif
@@ -1892,7 +1894,9 @@ username_completion_function(const char *text, int state)
 		setpwent();
 
 	while (
-#if defined(HAVE_GETPW_R_POSIX) || defined(HAVE_GETPW_R_DRAFT)
+/*#if defined(HAVE_GETPW_R_POSIX) || defined(HAVE_GETPW_R_DRAFT)*/
+/* portability note: getpwent_r is not POSIX */
+#if 0
 	    getpwent_r(&pwres, pwbuf, sizeof(pwbuf), &pass) == 0 && pass != NULL
 #else
 	    (pass = getpwent()) != NULL

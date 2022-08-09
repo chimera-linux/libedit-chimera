@@ -55,7 +55,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <sys/cdefs.h>
+#include "sys.h"
 #if defined(LIBC_SCCS) && !defined(lint)
 __RCSID("$NetBSD: vis.c,v 1.75 2021/06/18 10:57:14 christos Exp $");
 #endif /* LIBC_SCCS and not lint */
@@ -64,7 +64,6 @@ __FBSDID("$FreeBSD$");
 #define	_DIAGASSERT(x)	assert(x)
 #endif
 
-#include "namespace.h"
 #include <sys/types.h>
 #include <sys/param.h>
 
@@ -153,7 +152,6 @@ static const wchar_t char_glob[] = L"*?[#";
 #define __CTASSERT(x, y)        typedef char __assert ## y[(x) ? 1 : -1]
 #endif
 #endif /* __FreeBSD__ */
-CTASSERT(MB_LEN_MAX <= sizeof(uint64_t));
 #endif /* !__NetBSD__ */
 #endif
 
