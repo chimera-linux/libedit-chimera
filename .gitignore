@@ -1,0 +1,10 @@
+*.o
+common.h
+emacs.h
+vi.h
+fcns.h
+help.h
+func.h
+libedit.pc
+libedit.so.0.0.0
+libedit.a
