@@ -6,7 +6,7 @@ includedir=@includedir@
 Name: libedit
 Description: NetBSD line editing library
 Version: @VERSION@
-Requires: @REQUIRES@
+Requires.private: @REQUIRES@
 Libs: -L${libdir} -ledit
 Libs.private: @LIBS@
 Cflags: -I${includedir} -I${includedir}/editline
