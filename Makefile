@@ -84,14 +84,8 @@ $(STATICLIB): $(OBJS)
 	$(AR) -rcs $(STATICLIB) $(OBJS)
 
 $(PCFILE): $(PCFILE).in
-	REQ_LLIBS=$(REQ_LLIBS) sed -e 's,@prefix@,$(PREFIX),' \
-		-e 's,@exec_prefix@,$$\{prefix\},' \
-		-e 's,@libdir@,$$\{exec_prefix\}/$(LIBDIR),' \
-		-e 's,@includedir@,$$\{prefix\}/$(INCDIR),' \
-		-e 's,@VERSION@,$(VERSION),' \
-		-e 's,@REQUIRES@,$(REQUIRES),' \
-		-e 's,@LIBS@,'$(REQ_LLIBS)',' \
-		$(PCFILE).in > $(PCFILE)
+	PREFIX=$(PREFIX) LIBDIR=$(LIBDIR) INCDIR=$(INCDIR) VERSION=$(VERSION) \
+	REQUIRES=$(REQUIRES) REQLIBS=$(REQ_LLIBS) sh genpc.sh $(PCFILE)
 
 clean:
 	rm -f $(OBJS) $(AHDR) fcns.h help.h func.h \
