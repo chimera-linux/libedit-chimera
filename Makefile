@@ -3,6 +3,7 @@ VERSION = 20220411
 CC ?= cc
 AR ?= ar
 CFLAGS ?= -O2
+PKG_CONFIG ?= pkg-config
 
 PREFIX ?= /usr/local
 INCDIR ?= include
@@ -10,9 +11,9 @@ LIBDIR ?= lib
 MANDIR ?= share/man
 
 REQUIRES = ncursesw
-REQ_LIBS = `pkg-config --libs $(REQUIRES)`
-REQ_CFLAGS = `pkg-config --cflags $(REQUIRES)`
-REQ_LLIBS = `pkg-config --libs-only-l $(REQUIRES)`
+REQ_LIBS = `$(PKG_CONFIG) --libs $(REQUIRES)`
+REQ_CFLAGS = `$(PKG_CONFIG) --cflags $(REQUIRES)`
+REQ_LLIBS = `$(PKG_CONFIG) --libs-only-l $(REQUIRES)`
 
 EXTRA_CFLAGS = -I. -Wall -Wextra -fPIC
 
