@@ -1,6 +1,6 @@
 # libedit-chimera
 
-Current version: 20220411 (NetBSD trunk: libedit/chartype.h: portability fix for OSF/1)
+Current version: 20220921 (NetBSD trunk: PR/57016: Ricky Zhou: declare lastidx)
 
 This is a simplistic port of libedit from NetBSD upstream.
 
