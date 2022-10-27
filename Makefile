@@ -2,7 +2,7 @@ VERSION = 20220411
 
 CC ?= cc
 AR ?= ar
-CFLAGS ?= -O2
+CFLAGS ?= -O2 
 PKG_CONFIG ?= pkg-config
 
 PREFIX ?= /usr/local
@@ -15,7 +15,7 @@ REQ_LIBS = `$(PKG_CONFIG) --libs $(REQUIRES)`
 REQ_CFLAGS = `$(PKG_CONFIG) --cflags $(REQUIRES)`
 REQ_LLIBS = `$(PKG_CONFIG) --libs-only-l $(REQUIRES)`
 
-EXTRA_CFLAGS = -I. -Wall -Wextra -fPIC
+EXTRA_CFLAGS = -I. -Wall -Wextra -fPIC -D__STDC_ISO_10646__=201103L
 
 PATCHVER = 0
 SOBASE = libedit.so
