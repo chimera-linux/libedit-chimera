@@ -1,6 +1,6 @@
 # libedit-chimera
 
-Current version: 20220921 (NetBSD trunk: PR/57016: Ricky Zhou: declare lastidx)
+Current version: 20230530 (NetBSD trunk: Fix some const qual (Piotr Pawel Stefaniak))
 
 This is a simplistic port of libedit from NetBSD upstream.
 
