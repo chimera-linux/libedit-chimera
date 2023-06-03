@@ -61,8 +61,8 @@ __RCSID("$NetBSD: vis.c,v 1.75 2021/06/18 10:57:14 christos Exp $");
 #endif /* LIBC_SCCS and not lint */
 #ifdef __FBSDID
 __FBSDID("$FreeBSD$");
-#define	_DIAGASSERT(x)	assert(x)
 #endif
+#define	_DIAGASSERT(x)	assert(x)
 
 #include <sys/types.h>
 #include <sys/param.h>

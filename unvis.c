@@ -38,6 +38,8 @@ __RCSID("$NetBSD: unvis.c,v 1.45 2022/04/19 20:32:15 rillig Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
+#define _DIAGASSERT(x)  assert(x)
+
 #include <sys/types.h>
 
 #include <assert.h>
