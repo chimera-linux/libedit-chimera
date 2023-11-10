@@ -83,6 +83,7 @@ __weak_alias(strvisx,_strvisx)
 #include <limits.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdint.h>
 
 /*
  * The reason for going through the trouble to deal with character encodings
