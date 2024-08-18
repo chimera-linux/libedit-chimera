@@ -1,6 +1,6 @@
 # libedit-chimera
 
-Current version: 20230530 (NetBSD trunk: Fix some const qual (Piotr Pawel Stefaniak))
+Current version: 20240711 (NetBSD trunk: Don't fchmod(fileno(fp), ...) in history_save_fp().)
 
 This is a simplistic port of libedit from NetBSD upstream.
 
