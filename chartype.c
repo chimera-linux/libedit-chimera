@@ -38,6 +38,7 @@ __RCSID("$NetBSD: chartype.c,v 1.37 2023/08/10 20:38:00 mrg Exp $");
 #include <limits.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
 
 #include "el.h"
 
