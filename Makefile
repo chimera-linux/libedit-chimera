@@ -29,7 +29,7 @@ MAN3_LINKS = el_init el_init_fd el_end el_reset el_gets el_wgets el_getc \
  el_wgetc el_push el_wpush el_parse el_wparse el_set el_wset el_get el_wget \
  el_source el_resize el_cursor el_line el_wline el_insertstr el_winsertstr \
  el_deletestr el_wdeletestr history_init history_winit history_end \
- history_wend history history_w tok_init tok_winit tok_end tok_wend \
+ history_wend history_w tok_init tok_winit tok_end tok_wend \
  tok_reset tok_wreset tok_line tok_wline tok_str tok_wstr
 
 AWK = awk
