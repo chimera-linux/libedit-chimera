@@ -1,6 +1,6 @@
 # libedit-chimera
 
-Current version: 20240711 (NetBSD trunk: Don't fchmod(fileno(fp), ...) in history_save_fp().)
+Current version: 20250614 (NetBSD trunk: Change kill(0, signo) -> raise(signo))
 
 This is a simplistic port of libedit from NetBSD upstream.
 
