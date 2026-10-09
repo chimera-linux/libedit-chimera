@@ -1,6 +1,6 @@
 # libedit-chimera
 
-Current version: 20250614 (NetBSD trunk: Change kill(0, signo) -> raise(signo))
+Current version: 20260512 (NetBSD trunk: reorder so we don't crash.)
 
 This is a simplistic port of libedit from NetBSD upstream.
 
